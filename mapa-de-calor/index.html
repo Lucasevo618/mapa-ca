@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f1115" />
+  <title>Mapa de Calor de Denúncias — Foz do Iguaçu (PR)</title>
+  <meta name="description" content="Mapa de calor demonstrativo, com dados fictícios, de denúncias de violência contra mulheres em Foz do Iguaçu (PR) e locais seguros de apoio." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-banner" role="note">Dados fictícios — apenas demonstração</div>
+
+  <header class="site-header">
+    <p class="eyebrow">Foz do Iguaçu · Paraná</p>
+    <h1>Mapa de calor de denúncias</h1>
+    <p class="lead">Concentração de denúncias de violência contra mulheres por bairro, com destaque para as zonas mais seguras da cidade.</p>
+  </header>
+
+  <main class="layout">
+    <section class="map-wrap" aria-label="Mapa de calor de Foz do Iguaçu">
+      <div id="map" role="application" aria-label="Mapa interativo. Clique em uma zona para ver detalhes."></div>
+
+      <div class="legend" aria-label="Legenda">
+        <p class="legend-title">Legenda</p>
+        <div class="legend-gradient" aria-hidden="true"></div>
+        <div class="legend-labels">
+          <span>Risco baixo</span>
+          <span>Risco alto</span>
+        </div>
+        <div class="legend-item">
+          <span class="safe-swatch" aria-hidden="true"></span>
+          <span>Zona segura</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel" aria-label="Resumo dos dados">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-value" id="total-reports">0</span>
+          <span class="stat-label">Denúncias</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value stat-safe" id="total-safe">0</span>
+          <span class="stat-label">Zonas seguras</span>
+        </div>
+      </div>
+
+      <section class="panel-section">
+        <h2>Bairros por denúncias</h2>
+        <ol class="district-list" id="district-list"></ol>
+      </section>
+
+      <section class="panel-section">
+        <h2>Zonas seguras</h2>
+        <ul class="district-list" id="safe-list"></ul>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Dados fictícios — apenas demonstração.</strong> Os números e locais exibidos não representam ocorrências reais.</p>
+    <p>Em caso de violência, ligue <strong>180</strong> (Central de Atendimento à Mulher) ou <strong>190</strong> (Polícia Militar).</p>
+    <p class="credits">Mapa: © colaboradores do OpenStreetMap</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
